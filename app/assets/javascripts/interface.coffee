@@ -3,3 +3,5 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 @teste = () -> $.get("/interface/data").done (data) -> $("#texto").text(data.texto)
+
+@scan = () -> $.get("/interface/scan", {code: $("#input-code").val()}).done (data) -> console.log data.msg
