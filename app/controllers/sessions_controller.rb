@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
   layout "app"
 
-  skip_before_action :redirect_non_logged, only: [:new, :create]
-  before_action :redirect_logged, except: [:destroy]
+  # skip_before_action :redirect_non_logged, only: [:new, :create]
+  # before_action :redirect_logged, except: [:destroy]
 
   def new
   end
