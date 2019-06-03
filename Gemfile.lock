@@ -52,8 +52,6 @@ GEM
       execjs
     bcrypt (3.1.12)
     bindex (0.7.0)
-    bootsnap (1.4.4)
-      msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.20.2)
@@ -125,7 +123,6 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    msgpack (1.2.10)
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
@@ -230,7 +227,6 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootsnap
   byebug
   capybara (>= 2.15)
   carrierwave (= 1.2.2)
