@@ -1,0 +1,28 @@
+pt-BR:
+  operator: "Operador"
+  supervisor: "Supervisor"
+  manager: "Gerente"
+  hello: "Olá mundo"
+  name: "Nome"
+  erro:
+    one: "1 erro"
+    other: "%{count} erros"
+  activerecord:
+    attributes:
+      team:
+        name: "Nome"
+      address:
+        street: "Endereço"
+        number: "Número"
+        complement: "Complemento"
+        zipcode: "CEP"
+        neighborhood: "Bairro"
+        city: "Cidade"
+        state: "Estado"
+      account:
+        name: "Nome"
+        card_number: "Número do Cartão"
+        password: "Senha"
+        password_confirmation: "Confirmação da senha"
+        user_type: "Tipo de usuário"
+        email: "E-mail"

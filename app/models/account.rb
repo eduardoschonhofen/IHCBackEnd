@@ -5,9 +5,11 @@ class Account < ApplicationRecord
 
   VALID_CARD_NUMBER_REGEX = /\A\d+\z/i
   VALID_PASSWORD_REGEX = /\A([a-z].*\d|\d.*[a-z])\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name, presence: true, length: { maximum: 64 }
   validates :card_number, presence: true, length: { is: 8 }, format: { with: VALID_CARD_NUMBER_REGEX }, uniqueness: true
+  validates :email, presence: true, length: { maximum: 128 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 8, maximum: 32 }, allow_nil: true,
   format: { with: VALID_PASSWORD_REGEX, message: "deve conter pelo menos uma letra e um número" }
 

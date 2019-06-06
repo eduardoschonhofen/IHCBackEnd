@@ -1,0 +1,25 @@
+<h1>Presenças</h1>
+
+<table class="highlight">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Disciplina</th>
+        <th>Aluno</th>
+        <th>Código</th>
+        <th>Data</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendances.each do |a| %>
+      <tr>
+        <td><%= a.id %></td>
+        <td><%= a.discipline.name %></td>
+        <td><%= a.student.account.name %></td>
+        <td><%= a.code %></td>
+        <td><%= timezoned(a.created_at) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

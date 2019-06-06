@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'attendances/new'
+  get 'attendances',    to: 'attendances#index'
   root   'sessions#new'
   get    '/menu',    to: 'interface#index'
   get    '/login',   to: 'sessions#new'
@@ -9,9 +11,11 @@ Rails.application.routes.draw do
   get 'interface/data'
   get 'interface/app'
   get 'interface/cable'
+  get 'interface/attendances'
+
   get 'interface/scan'
 
-  resources :accounts
+  post   '/accounts/create',   to: 'accounts#create'
 
   mount ActionCable.server => '/cable'
 end
