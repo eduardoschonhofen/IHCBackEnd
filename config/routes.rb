@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'interface/attendances'
 
   get 'interface/scan'
+  post 'interface/scan'
 
   post   '/accounts/create',   to: 'accounts#create'
 
